@@ -19,11 +19,13 @@ To use the scripts in this repository:
 
 pip install webvtt-py
 
-2. Create a virtual environment for the Python script
+2. Make the shell scripts executable:
 
-3. Store your VTT files in the same directory as the scripts
+   chmod u+x *.sh
 
-4. Run the shell script: ./vtt_list_script.sh 
+4. Store your VTT files in the same directory as the scripts
+
+5. Run the shell script: ./vtt_list_script.sh 
 
 This script will create a file named vttlist.sh which has one command for each VTT file found.
 
@@ -32,3 +34,15 @@ That script runs vtt.sh for each VTT file to convert it to TXT.  It uses the oth
 5. Run the shell script: ./vttlist.sh
 
 You can then move the original VTT files and converted TXT files to subdirectories of your choice to clean up the directory for your next run.
+
+
+Script dependencies:
+
+vtt.sh calls rename_script.sh to create vttfname.txt, which contains the filename after it is sanitized to remove spaces and special characters
+
+vtt.sh calls humantr.sh to produce the human readable transcripts
+
+humantr.sh calls python script: remove_duplicate_lines.py to extract the human-readable content.
+
+
+
