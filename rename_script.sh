@@ -42,7 +42,7 @@ if [ "$original_file" != "$new_name" ]; then
     mv "$original_file" "$new_name"
     echo "$clean_filename"
 else
-    echo "No need to rename. File doesn't contain spaces or special characters."
+    echo "$clean_filename"
 fi
 
 exit 0
