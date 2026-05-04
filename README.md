@@ -19,3 +19,14 @@ pip install webvtt-py
 
 2. Create a virtual environment for the Python script
 
+3. Store your VTT files in the same directory as the scripts
+
+4. Run the shell script: ./vtt_list_script.sh 
+
+This script will create a file named vttlist.sh which has one command for each VTT file found.
+
+That script runs vtt.sh for each VTT file to convert it to TXT.  It uses the other shell scripts and python code to accomplish this.
+
+5. Run the shell script: ./vttlist.sh
+
+You can then move the original VTT files and converted TXT files to subdirectories of your choice to clean up the directory for your next run.
